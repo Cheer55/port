@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        
+        <!-- Game Mode Selection -->
+        <div class="game-controls">
+            <div class="mode-selection">
+                <label for="gameMode">โหมดเกม:</label>
+                <select id="gameMode">
+                    <option value="pvp">PvP (Player vs Player)</option>
+                    <option value="pvc">PvC (Player vs Computer)</option>
+                    <option value="cvc">CvC (Computer vs Computer)</option>
+                </select>
+            </div>
+            
+            <!-- Difficulty Selection (hidden by default) -->
+            <div class="difficulty-selection" id="difficultySection" style="display: none;">
+                <label for="difficulty">ระดับความยาก:</label>
+                <select id="difficulty">
+                    <option value="easy">ง่าย (Easy)</option>
+                    <option value="medium">กลาง (Medium)</option>
+                    <option value="hard">ยาก (Hard)</option>
+                </select>
+            </div>
+            
+            <button id="startGame">เริ่มเกมใหม่</button>
+        </div>
+        
+        <!-- Game Status -->
+        <div class="game-status">
+            <p id="gameStatus">เลือกโหมดเกมและกดเริ่มเกมใหม่</p>
+            <p id="currentPlayer">ตาของ: X</p>
+        </div>
+        
+        <!-- Game Board -->
+        <div class="game-board" id="gameBoard">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        
+        <!-- Reset Button -->
+        <button id="resetGame" class="reset-btn">รีเซ็ตเกม</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
